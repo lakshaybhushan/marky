@@ -7,10 +7,10 @@ interface PreviewProps {
 export default function Preview({ markdown }: PreviewProps) {
   const parsed = DOMPurify.sanitize(marked.parse(markdown));
   return (
-    <div className="overflow-y-hidden">
-      <div className="w-full bg-gray-950 p-3 uppercase text-gray-400 tracking-widest">
+    <div className="overflow-y-hidden bg-slate-900 h-full">
+      {/* <div className="w-full bg-gray-950 p-3 uppercase text-gray-400 tracking-widest">
         Preview
-      </div>
+      </div> */}
       <div
         className="overflow-y-scroll p-6 prose prose-invert prose-a:text-cyan-300"
         dangerouslySetInnerHTML={{ __html: parsed }}
